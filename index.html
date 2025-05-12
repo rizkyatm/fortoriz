@@ -9,6 +9,9 @@
     html {
       scroll-behavior: smooth;
     }
+    body {
+      overflow-x: hidden; /* Mencegah scroll horizontal */
+    }
     @keyframes typing {
       from { width: 0 }
       to { width: 100% }
@@ -23,116 +26,117 @@
 </head>
 <body class="bg-gray-900 text-gray-100">
 
-  <!-- Navbar -->
-  <nav class="fixed top-0 left-0 w-full z-50 bg-gray-800 shadow-md">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-indigo-400">RIZATM</h1>
-      
-      <!-- Mobile Menu Button -->
-      <div class="sm:hidden">
-        <button id="menu-button" class="text-indigo-400 focus:outline-none">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-      </div>
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-gray-800 shadow-md">
+        <div class="max-w-full mx-auto px-4 py-3 flex justify-between items-center flex-wrap">
+        <h1 class="text-2xl font-bold text-indigo-400">RIZATM</h1>
+        
+        <!-- Mobile Menu Button -->
+        <div class="sm:hidden">
+            <button id="menu-button" class="text-indigo-400 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            </button>
+        </div>
 
-      <!-- Menu Links -->
-      <ul id="menu" class="hidden sm:flex space-x-6 text-sm font-semibold">
-        <li><a href="#about" class="hover:text-indigo-400">Tentang</a></li>
-        <li><a href="#skills" class="hover:text-indigo-400">Keahlian</a></li>
-        <li><a href="#projects" class="hover:text-indigo-400">Projek</a></li>
-        <li><a href="#experience" class="hover:text-indigo-400">Pengalaman</a></li>
-        <li><a href="#certificates" class="hover:text-indigo-400">Sertifikat</a></li>
-      </ul>
-    </div>
-  </nav>
+        <!-- Menu Links -->
+        <ul id="menu" class="hidden sm:flex space-x-6 text-sm font-semibold">
+            <li><a href="#about" class="hover:text-indigo-400">Tentang</a></li>
+            <li><a href="#skills" class="hover:text-indigo-400">Keahlian</a></li>
+            <li><a href="#projects" class="hover:text-indigo-400">Projek</a></li>
+            <li><a href="#experience" class="hover:text-indigo-400">Pengalaman</a></li>
+            <li><a href="#certificates" class="hover:text-indigo-400">Sertifikat</a></li>
+        </ul>
+        </div>
+    </nav>
 
-  <!-- Hero Section -->
-  <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 bg-gray-900 relative py-16">
-    <div class="absolute inset-0 bg-black opacity-60"></div>
-    <div class="relative z-10">
-      <h2 class="text-4xl sm:text-5xl font-extrabold text-indigo-400 drop-shadow-md mb-4">Halo, Saya M Rizky Atmaja</h2>
-      <p class="text-xl sm:text-2xl text-gray-300 mb-8 typing-text">Web Developer | Mobile Developer | UI/UX Enthusiast</p>
-      <a href="#projects" class="bg-indigo-600 text-white px-8 py-4 rounded-full hover:bg-indigo-700 transition transform hover:scale-105">Lihat Projek Saya</a>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 bg-gray-900 relative py-16 overflow-x-hidden">
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="relative z-10">
+            <h2 class="text-4xl sm:text-5xl font-extrabold text-indigo-400 drop-shadow-md mb-4">Halo, Saya M Rizky Atmaja</h2>
+            <p class="text-xl sm:text-2xl text-gray-300 mb-8 typing-text">Web Developer | Mobile Developer | UI/UX Enthusiast</p>
+            <a href="#projects" class="bg-indigo-600 text-white px-8 py-4 rounded-full hover:bg-indigo-700 transition transform hover:scale-105">Lihat Projek Saya</a>
+        </div>
+    </section>
 
-  <!-- About Section -->
-  <section id="about" class="max-w-5xl mx-auto px-6 py-24">
-    <h3 class="text-3xl font-bold mb-6 text-center text-indigo-400">Tentang Saya</h3>
-    <p class="text-gray-400 leading-relaxed text-center">
-      Saya adalah seorang full-stack developer dengan keahlian dalam membangun aplikasi web dan mobile yang lengkap, dari front-end hingga back-end. Saya memiliki pengalaman dalam merancang dan mengembangkan sistem yang responsif, efisien, dan skalabel menggunakan berbagai teknologi seperti Laravel, Flutter, dan JavaScript. Fokus saya adalah menciptakan aplikasi yang tidak hanya berfungsi dengan baik tetapi juga memberikan pengalaman pengguna yang optimal.
-    </p>
-  </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="py-24 bg-gray-900">
-    <div class="max-w-6xl mx-auto px-6">
-      <h3 class="text-3xl font-bold text-center mb-12 text-indigo-400">Keahlian</h3>
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
-        <div class="bg-gray-700 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="w-16 h-16 mx-auto mb-4">
-          <h4 class="font-bold text-indigo-400">HTML5</h4>
-        </div>
-        <div class="bg-gray-700 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="w-16 h-16 mx-auto mb-4">
-          <h4 class="font-bold text-indigo-400">CSS3</h4>
-        </div>
-        <div class="bg-gray-700 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-16 h-16 mx-auto mb-4">
-          <h4 class="font-bold text-indigo-400">JavaScript</h4>
-        </div>
-        <div class="bg-gray-700 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" class="w-16 h-16 mx-auto mb-4">
-          <h4 class="font-bold text-indigo-400">Flutter</h4>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- About Section -->
+    <section id="about" class="max-w-5xl mx-auto px-6 py-24">
+        <h3 class="text-3xl font-bold mb-6 text-center text-indigo-400">Tentang Saya</h3>
+        <p class="text-gray-400 leading-relaxed text-center">
+        Saya adalah seorang full-stack developer dengan keahlian dalam membangun aplikasi web dan mobile yang lengkap, dari front-end hingga back-end. Saya memiliki pengalaman dalam merancang dan mengembangkan sistem yang responsif, efisien, dan skalabel menggunakan berbagai teknologi seperti Laravel, Flutter, dan JavaScript. Fokus saya adalah menciptakan aplikasi yang tidak hanya berfungsi dengan baik tetapi juga memberikan pengalaman pengguna yang optimal.
+        </p>
+    </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="py-24 bg-gray-900">
-    <div class="max-w-6xl mx-auto px-6">
-      <h3 class="text-3xl font-bold text-center mb-12 text-indigo-400">Projek Terbaru</h3>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        <div class="bg-gray-700 rounded-2xl shadow-lg p-6 hover:scale-105 transform transition">
-          <h4 class="text-xl font-bold mb-2 text-indigo-400">E-commerce Website</h4>
-          <p class="text-gray-400">Membangun platform jual beli online menggunakan Laravel + Tailwind CSS.</p>
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 bg-gray-900">
+        <div class="max-w-6xl mx-auto px-6">
+        <h3 class="text-3xl font-bold text-center mb-12 text-indigo-400">Keahlian</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
+            <div class="bg-gray-700 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="w-16 h-16 mx-auto mb-4">
+            <h4 class="font-bold text-indigo-400">HTML5</h4>
+            </div>
+            <div class="bg-gray-700 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="w-16 h-16 mx-auto mb-4">
+            <h4 class="font-bold text-indigo-400">CSS3</h4>
+            </div>
+            <div class="bg-gray-700 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-16 h-16 mx-auto mb-4">
+            <h4 class="font-bold text-indigo-400">JavaScript</h4>
+            </div>
+            <div class="bg-gray-700 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" class="w-16 h-16 mx-auto mb-4">
+            <h4 class="font-bold text-indigo-400">Flutter</h4>
+            </div>
         </div>
-        <div class="bg-gray-700 rounded-2xl shadow-lg p-6 hover:scale-105 transform transition">
-          <h4 class="text-xl font-bold mb-2 text-indigo-400">Mobile App</h4>
-          <p class="text-gray-400">Membuat aplikasi mobile berbasis Flutter untuk marketplace lokal.</p>
         </div>
-        <div class="bg-gray-700 rounded-2xl shadow-lg p-6 hover:scale-105 transform transition">
-          <h4 class="text-xl font-bold mb-2 text-indigo-400">Portofolio Web</h4>
-          <p class="text-gray-400">Website portofolio personal dengan animasi dan tampilan interaktif.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Experience Section -->
-  <section id="experience" class="py-24 bg-gray-900">
-    <div class="max-w-5xl mx-auto px-6">
-      <h3 class="text-3xl font-bold text-center mb-12 text-indigo-400">Pengalaman Kerja</h3>
-      <div class="space-y-8">
-        <div class="bg-gray-700 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-          <h4 class="text-xl font-bold text-indigo-400">Fullstack Developer Intern - Sada Technology</h4>
-          <p class="text-gray-400">2024 - Membuat aplikasi berbasis web menggunakan Laravel dan Flutter.</p>
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 bg-gray-900">
+        <div class="max-w-6xl mx-auto px-6">
+        <h3 class="text-3xl font-bold text-center mb-12 text-indigo-400">Projek Terbaru</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <div class="bg-gray-700 rounded-2xl shadow-lg p-6 hover:scale-105 transform transition">
+            <h4 class="text-xl font-bold mb-2 text-indigo-400">E-commerce Website</h4>
+            <p class="text-gray-400">Membangun platform jual beli online menggunakan Laravel + Tailwind CSS.</p>
+            </div>
+            <div class="bg-gray-700 rounded-2xl shadow-lg p-6 hover:scale-105 transform transition">
+            <h4 class="text-xl font-bold mb-2 text-indigo-400">Mobile App</h4>
+            <p class="text-gray-400">Membuat aplikasi mobile berbasis Flutter untuk marketplace lokal.</p>
+            </div>
+            <div class="bg-gray-700 rounded-2xl shadow-lg p-6 hover:scale-105 transform transition">
+            <h4 class="text-xl font-bold mb-2 text-indigo-400">Portofolio Web</h4>
+            <p class="text-gray-400">Website portofolio personal dengan animasi dan tampilan interaktif.</p>
+            </div>
         </div>
-        <div class="bg-gray-700 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-          <h4 class="text-xl font-bold text-indigo-400">Freelance Web Developer</h4>
-          <p class="text-gray-400">2023 - Mengembangkan website portofolio dan toko online untuk klien lokal.</p>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="text-center py-6 text-gray-600 text-sm">
-    © 2025 [Nama Kamu]. All rights reserved.
-  </footer>
+    <!-- Experience Section -->
+    <section id="experience" class="py-24 bg-gray-900">
+        <div class="max-w-5xl mx-auto px-6">
+        <h3 class="text-3xl font-bold text-center mb-12 text-indigo-400">Pengalaman Kerja</h3>
+        <div class="space-y-8">
+            <div class="bg-gray-700 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
+            <h4 class="text-xl font-bold text-indigo-400">Fullstack Developer Intern - Sada Technology</h4>
+            <p class="text-gray-400">2024 - Membuat aplikasi berbasis web menggunakan Laravel dan Flutter.</p>
+            </div>
+            <div class="bg-gray-700 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
+            <h4 class="text-xl font-bold text-indigo-400">Freelance Web Developer</h4>
+            <p class="text-gray-400">2023 - Mengembangkan website portofolio dan toko online untuk klien lokal.</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 text-gray-600 text-sm">
+        © 2025 Muhammad Rizky Atmaja. All rights reserved.
+    </footer>
 
   <!-- Scripts -->
   <script>
